@@ -30,7 +30,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOLD";
             #binding-cells = <2>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <100>;
             bindings = <&kp>, <&kp>;
         };
 
@@ -40,7 +40,7 @@
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <100>;
         };
     };
 
@@ -60,7 +60,7 @@
 &kp ESCAPE      &kp Q  &kp W  &kp E      &kp R         &kp T                   &kp Y        &kp U  &kp I                 &kp O    &kp P     &kp BSPC
 &kp TAB         &kp A  &kp S  &kp D      &kp F         &kp G                   &kp H        &kp J  &kp K                 &kp L    &kp SEMI  &kp ENTER
 &kp LEFT_SHIFT  &kp Z  &kp X  &kp C      &kp V         &kp B                   &kp N        &kp M  &kp COMMA             &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
-                              &kp LCTRL  &kp LEFT_ALT  &hold LEFT_GUI SPACE    &lt 1 ENTER  &mo 2  &hold_mo 3 RIGHT_ALT
+                              &kp LCTRL  &kp LEFT_ALT  &hold LEFT_GUI SPACE    &lt 1 SPACE  &mo 2  &hold_mo 3 RIGHT_ALT
             >;
         };
 
@@ -91,10 +91,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp F1     &kp F2        &kp F3        &kp F4  &kp F5  &kp F6       &kp F7     &kp F8     &kp F9    &kp F10   &kp F11   &kp F12
-&trans     &none         &none         &none   &none   &none        &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT  &kp BSLH  &kp GRAVE
-&kp LSHFT  &out OUT_USB  &out OUT_BLE  &none   &none   &none        &kp UNDER  &kp PLUS   &kp LBRC  &kp RBRC  &kp PIPE  &kp RSHFT
-                                       &trans  &trans  &kp SPACE    &kp RET    &trans     &trans
+&kp F1     &kp F2        &kp F3        &kp F4  &kp F5  &kp F6       &kp F7     &kp F8    &kp F9    &kp F10   &kp F11   &kp F12
+&trans     &none         &none         &none   &none   &none        &trans     &trans    &trans    &trans    &trans    &trans
+&kp LSHFT  &out OUT_USB  &out OUT_BLE  &none   &none   &none        &kp UNDER  &kp PLUS  &kp LBRC  &kp RBRC  &kp PIPE  &kp RSHFT
+                                       &trans  &trans  &kp SPACE    &kp RET    &trans    &trans
             >;
         };
 
