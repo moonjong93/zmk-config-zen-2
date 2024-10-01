@@ -49,7 +49,7 @@
 
         mo4 {
             bindings = <&mo 4>;
-            key-positions = <38 24>;
+            key-positions = <36 28>;
         };
     };
 
