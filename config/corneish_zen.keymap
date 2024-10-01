@@ -30,7 +30,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOLD";
             #binding-cells = <2>;
-            tapping-term-ms = <700>;
+            tapping-term-ms = <1000>;
             bindings = <&kp>, <&kp>;
         };
 
@@ -40,16 +40,7 @@
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <100>;
-        };
-
-        new_behavior: new_behavior {
-            compatible = "zmk,behavior-hold-tap";
-            label = "NEW_BEHAVIOR";
-            bindings = <&mo>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <700>;
+            tapping-term-ms = <1000>;
         };
     };
 
@@ -110,10 +101,10 @@
         layer_3 {
             display-name = "Fn";
             bindings = <
-&trans  &kp F1  &kp F2  &kp F3  &kp F4      &kp F5         &kp F6       &kp F7  &kp F8  &kp LBKT  &kp RBKT        &kp BSLH
-&trans  &trans  &trans  &trans  &sys_reset  &bootloader    &bootloader  &trans  &trans  &trans    &trans          &trans
-&trans  &trans  &trans  &trans  &trans      &trans         &trans       &trans  &trans  &trans    &kp SCROLLLOCK  &kp PAUSE_BREAK
-                        &trans  &trans      &trans         &trans       &trans  &trans
+&kp GRAVE  &trans  &trans  &trans  &trans      &trans         &trans       &trans  &trans  &kp LBKT  &kp RBKT        &kp BSLH
+&trans     &trans  &trans  &trans  &sys_reset  &bootloader    &bootloader  &trans  &trans  &trans    &trans          &trans
+&trans     &trans  &trans  &trans  &trans      &trans         &trans       &trans  &trans  &trans    &kp SCROLLLOCK  &kp PAUSE_BREAK
+                           &trans  &trans      &trans         &trans       &trans  &trans
             >;
         };
     };
