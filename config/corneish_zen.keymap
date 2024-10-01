@@ -44,6 +44,15 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        mo4 {
+            bindings = <&mo 4>;
+            key-positions = <38 24>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -57,10 +66,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp ESCAPE      &kp Q  &kp W  &kp E         &kp R             &kp T                       &kp Y             &kp U  &kp I                 &kp O    &kp P     &kp BSPC
-&kp TAB         &kp A  &kp S  &kp D         &kp F             &kp G                       &kp H             &kp J  &kp K                 &kp L    &kp SEMI  &kp ENTER
-&kp LEFT_SHIFT  &kp Z  &kp X  &kp C         &kp V             &kp B                       &kp N             &kp M  &kp COMMA             &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
-                              &kp LEFT_ALT  &kp LEFT_COMMAND  &hold LEFT_COMMAND SPACE    &hold_mo 1 SPACE  &mo 2  &hold_mo 3 RIGHT_ALT
+&kp ESCAPE      &kp Q  &kp W  &kp E      &kp R         &kp T                       &kp Y             &kp U  &kp I                 &kp O    &kp P     &kp BSPC
+&kp TAB         &kp A  &kp S  &kp D      &kp F         &kp G                       &kp H             &kp J  &kp K                 &kp L    &kp SEMI  &kp ENTER
+&kp LEFT_SHIFT  &kp Z  &kp X  &kp C      &kp V         &kp B                       &kp N             &kp M  &kp COMMA             &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
+                              &kp LCTRL  &kp LEFT_ALT  &hold LEFT_COMMAND SPACE    &hold_mo 1 SPACE  &mo 2  &hold_mo 3 RIGHT_ALT
             >;
         };
 
@@ -101,10 +110,19 @@
         layer_3 {
             display-name = "Fn";
             bindings = <
-&kp GRAVE  &trans  &trans  &trans  &trans      &trans         &trans       &trans  &trans  &kp LBKT  &kp RBKT        &kp BSLH
-&trans     &trans  &trans  &trans  &sys_reset  &bootloader    &bootloader  &trans  &trans  &trans    &trans          &trans
-&trans     &trans  &trans  &trans  &trans      &trans         &trans       &trans  &trans  &trans    &kp SCROLLLOCK  &kp PAUSE_BREAK
-                           &trans  &trans      &trans         &trans       &trans  &trans
+&trans  &trans  &trans  &trans  &trans      &trans         &trans       &trans  &trans  &kp LBKT  &kp RBKT        &kp BSLH
+&trans  &trans  &trans  &trans  &sys_reset  &bootloader    &bootloader  &trans  &trans  &trans    &trans          &trans
+&trans  &trans  &trans  &trans  &trans      &trans         &trans       &trans  &trans  &trans    &kp SCROLLLOCK  &kp PAUSE_BREAK
+                        &trans  &trans      &trans         &trans       &trans  &trans
+            >;
+        };
+
+        left_modifired {
+            bindings = <
+&kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &kp LG(NUMBER_4)  &kp LG(N5)  &kp LG(NUMBER_6)    &trans  &trans  &trans  &trans  &trans  &trans
+&kp LG(GRAVE)     &trans            &trans            &trans            &trans      &trans              &trans  &trans  &trans  &trans  &trans  &trans
+&trans            &trans            &trans            &trans            &trans      &trans              &trans  &trans  &trans  &trans  &trans  &trans
+                                                      &trans            &trans      &trans              &trans  &trans  &trans
             >;
         };
     };
