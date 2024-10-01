@@ -110,9 +110,9 @@
         layer_3 {
             display-name = "Fn";
             bindings = <
-&trans  &trans  &trans  &trans  &trans      &trans         &trans       &trans  &trans  &kp LBKT  &kp RBKT        &kp BSLH
-&trans  &trans  &trans  &trans  &sys_reset  &bootloader    &bootloader  &trans  &trans  &trans    &trans          &trans
-&trans  &trans  &trans  &trans  &trans      &trans         &trans       &trans  &trans  &trans    &kp SCROLLLOCK  &kp PAUSE_BREAK
+&trans  &trans  &trans  &trans  &trans      &trans         &trans       &trans  &trans  &kp LBKT  &kp RBKT  &kp BSLH
+&trans  &trans  &trans  &trans  &sys_reset  &bootloader    &bootloader  &trans  &trans  &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans      &trans         &trans       &trans  &trans  &trans    &trans    &trans
                         &trans  &trans      &trans         &trans       &trans  &trans
             >;
         };
