@@ -54,9 +54,14 @@
     combos {
         compatible = "zmk,combos";
 
-        mo4 {
+        sys_combo {
+            bindings = <&mo 4>;
+            key-positions = <34 33 32>;
+        };
+
+        left_mod {
             bindings = <&mo 3>;
-            key-positions = <37 29>;
+            key-positions = <24 38>;
         };
     };
 
@@ -73,10 +78,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&td_esc_grave    &kp Q  &kp W  &kp E         &kp R             &kp T           &kp Y      &kp U  &kp I                 &kp O    &kp P     &kp BSPC
-&hold LCTRL TAB  &kp A  &kp S  &kp D         &kp F             &kp G           &kp H      &kp J  &kp K                 &kp L    &kp SEMI  &kp ENTER
-&kp LEFT_SHIFT   &kp Z  &kp X  &kp C         &kp V             &hold_mo 3 B    &kp N      &kp M  &kp COMMA             &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
-                               &kp LEFT_ALT  &kp LEFT_COMMAND  &kp SPACE       &kp SPACE  &mo 1  &hold_mo 2 RIGHT_ALT
+&td_esc_grave    &kp Q  &kp W  &kp E         &kp R             &kp T        &kp Y      &kp U  &kp I                 &kp O    &kp P     &kp BSPC
+&hold LCTRL TAB  &kp A  &kp S  &kp D         &kp F             &kp G        &kp H      &kp J  &kp K                 &kp L    &kp SEMI  &kp ENTER
+&kp LEFT_SHIFT   &kp Z  &kp X  &kp C         &kp V             &kp B        &kp N      &kp M  &kp COMMA             &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
+                               &kp LEFT_ALT  &kp LEFT_COMMAND  &kp SPACE    &kp SPACE  &mo 1  &hold_mo 2 RIGHT_ALT
             >;
         };
 
@@ -125,10 +130,10 @@
 
         sys {
             bindings = <
-&trans  &trans          &trans        &trans        &trans        &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &bt BT_CLR_ALL  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 3  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &out OUT_USB    &out OUT_BLE  &trans        &trans        &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                                      &trans        &trans        &trans    &trans  &trans  &trans
+&trans  &trans          &trans        &trans        &out OUT_BLE  &out OUT_USB    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &bt BT_CLR_ALL  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 3  &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans          &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                                      &trans        &trans        &trans          &trans  &trans  &trans
             >;
         };
     };
