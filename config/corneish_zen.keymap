@@ -55,13 +55,13 @@
         compatible = "zmk,combos";
 
         sys_combo {
-            bindings = <&mo 4>;
+            bindings = <&mo 5>;
             key-positions = <34 33 32>;
         };
 
         left_mod {
-            bindings = <&mo 3>;
-            key-positions = <24 38>;
+            bindings = <&mo 4>;
+            key-positions = <24 37>;
         };
     };
 
@@ -78,10 +78,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&td_esc_grave    &kp Q  &kp W  &kp E         &kp R             &kp T        &kp Y      &kp U  &kp I                 &kp O    &kp P     &kp BSPC
-&hold LCTRL TAB  &kp A  &kp S  &kp D         &kp F             &kp G        &kp H      &kp J  &kp K                 &kp L    &kp SEMI  &kp ENTER
-&kp LEFT_SHIFT   &kp Z  &kp X  &kp C         &kp V             &kp B        &kp N      &kp M  &kp COMMA             &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
-                               &kp LEFT_ALT  &kp LEFT_COMMAND  &kp SPACE    &kp SPACE  &mo 1  &hold_mo 2 RIGHT_ALT
+&td_esc_grave    &kp Q  &kp W  &kp E         &kp R             &kp T        &kp Y  &kp U  &kp I                 &kp O    &kp P     &kp BSPC
+&hold LCTRL TAB  &kp A  &kp S  &kp D         &kp F             &kp G        &kp H  &kp J  &kp K                 &kp L    &kp SEMI  &kp ENTER
+&kp LEFT_SHIFT   &kp Z  &kp X  &kp C         &kp V             &kp B        &kp N  &kp M  &kp COMMA             &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
+                               &kp LEFT_ALT  &kp LEFT_COMMAND  &kp SPACE    &mo 1  &mo 2  &hold_mo 2 RIGHT_ALT
             >;
         };
 
@@ -95,14 +95,23 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6    &kp N7    &kp N8    &kp N9  &kp N0     &kp MINUS  &kp EQUAL
-&trans  &trans  &trans  &trans  &trans  &trans    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp SEMI   &kp SQT
-&trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans    &trans  &trans     &trans     &trans
-                        &trans  &trans  &trans    &trans    &trans    &trans
+&kp GRAVE  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &kp N6    &kp N7    &kp N8  &kp N9     &kp N0    &trans
+&trans     &trans  &trans  &trans  &trans  &trans    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp SEMI  &kp SQT
+&trans     &trans  &trans  &trans  &trans  &trans    &trans    &trans    &trans  &trans     &trans    &trans
+                           &trans  &trans  &trans    &trans    &trans    &trans
             >;
         };
 
-        raise_layer {
+        raise {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &kp MINUS         &kp EQUAL          &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp NON_US_BACKSLASH
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans            &trans             &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        fn {
             display-name = "SYMBOL";
 
             // -----------------------------------------------------------------------------------------
@@ -112,19 +121,19 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp F1     &kp F2  &kp F3  &kp F4  &kp F5  &kp F6    &kp F7  &kp F8  &kp F9  &kp F10           &kp F11            &kp F12
-&kp GRAVE  &none   &none   &none   &none   &none     &trans  &trans  &trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH
-&trans     &trans  &trans  &none   &none   &none     &trans  &trans  &trans  &trans            &trans             &trans
-                           &trans  &trans  &trans    &trans  &trans  &trans
+&trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5    &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &trans
+&trans  &none   &none   &none   &none   &none     &trans  &trans  &trans  &trans  &trans   &kp F11
+&trans  &trans  &trans  &none   &none   &none     &trans  &trans  &trans  &trans  &trans   &kp F12
+                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
 
         left_modifired {
             bindings = <
-&kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &kp LG(NUMBER_4)  &kp LG(N5)  &kp LG(NUMBER_6)    &trans  &trans  &trans  &trans  &trans  &trans
-&kp LG(GRAVE)     &trans            &trans            &trans            &trans      &trans              &trans  &trans  &trans  &trans  &trans  &trans
-&trans            &trans            &trans            &trans            &trans      &trans              &trans  &trans  &trans  &trans  &trans  &trans
-                                                      &trans            &trans      &trans              &trans  &trans  &trans
+&trans  &kp LG(N1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &kp LG(NUMBER_4)  &kp LG(N5)    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans      &trans            &trans            &trans            &trans        &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans      &trans            &trans            &trans            &trans        &trans  &trans  &trans  &trans  &trans  &trans
+                                      &trans            &trans            &trans        &trans  &trans  &trans
             >;
         };
 
