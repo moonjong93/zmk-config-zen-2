@@ -55,18 +55,25 @@
         compatible = "zmk,combos";
 
         sys_combo {
-            bindings = <&mo 4>;
+            bindings = <&mo 3>;
             key-positions = <34 33 32>;
         };
 
         left_mod {
-            bindings = <&mo 3>;
+            bindings = <&mo 2>;
             key-positions = <24 37>;
         };
 
         s_quote {
             bindings = <&kp SINGLE_QUOTE>;
             key-positions = <23 22>;
+            layers = <0>;
+        };
+
+        backslash {
+            bindings = <&kp BACKSLASH>;
+            key-positions = <23 22>;
+            layers = <1>;
         };
     };
 
@@ -83,10 +90,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&td_esc_grave    &kp Q  &kp W  &kp E         &kp R             &kp T        &kp Y  &kp U  &kp I          &kp O    &kp P     &kp BSPC
-&hold LCTRL TAB  &kp A  &kp S  &kp D         &kp F             &kp G        &kp H  &kp J  &kp K          &kp L    &kp SEMI  &kp ENTER
-&kp LEFT_SHIFT   &kp Z  &kp X  &kp C         &kp V             &kp B        &kp N  &kp M  &kp COMMA      &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
-                               &kp LEFT_ALT  &kp LEFT_COMMAND  &kp SPACE    &mo 1  &mo 2  &kp RIGHT_ALT
+&td_esc_grave    &kp Q  &kp W  &kp E         &kp R             &kp T        &kp Y  &kp U   &kp I          &kp O    &kp P     &kp BSPC
+&hold LCTRL TAB  &kp A  &kp S  &kp D         &kp F             &kp G        &kp H  &kp J   &kp K          &kp L    &kp SEMI  &kp ENTER
+&kp LEFT_SHIFT   &kp Z  &kp X  &kp C         &kp V             &kp B        &kp N  &kp M   &kp COMMA      &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
+                               &kp LEFT_ALT  &kp LEFT_COMMAND  &kp SPACE    &mo 1  &trans  &kp RIGHT_ALT
             >;
         };
 
@@ -100,28 +107,19 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6    &kp N7  &kp N8  &kp N9  &kp N0    &kp MINUS  &kp EQUAL
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &kp LBKT  &kp RBKT   &kp BSLH
-&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6    &kp F7  &kp F8  &kp F9  &kp F10   &kp F11    &kp F12
-                        &trans  &trans  &trans    &trans  &trans  &trans
-            >;
-        };
-
-        raise {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans          &trans          &trans        &trans        &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp UP_ARROW  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans          &trans          &trans        &trans        &trans  &trans
+&kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6    &kp N7          &kp N8          &kp N9        &kp N0           &kp MINUS         &kp EQUAL
+&trans  &trans  &trans  &trans  &trans  &trans    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6    &kp F7          &kp F8          &kp F9        &kp F10          &kp F11           &kp F12
                         &trans  &trans  &trans    &trans          &trans          &trans
             >;
         };
 
         left_modifired {
             bindings = <
-&trans  &kp LG(N1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &kp LG(NUMBER_4)  &kp LG(N5)    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans      &trans            &trans            &trans            &trans        &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans      &trans            &trans            &trans            &trans        &trans  &trans  &trans  &trans  &trans  &trans
-                                      &trans            &trans            &trans        &trans  &trans  &trans
+&kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &kp LG(NUMBER_4)  &kp LG(N5)  &kp LG(NUMBER_6)    &trans  &trans  &trans  &trans  &trans  &trans
+&trans            &trans            &trans            &trans            &trans      &trans              &trans  &trans  &trans  &trans  &trans  &trans
+&trans            &trans            &trans            &trans            &trans      &trans              &trans  &trans  &trans  &trans  &trans  &trans
+                                                      &trans            &trans      &trans              &trans  &trans  &trans
             >;
         };
 
