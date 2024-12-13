@@ -72,7 +72,7 @@
 
         backslash {
             bindings = <&kp BACKSLASH>;
-            key-positions = <23 22>;
+            key-positions = <10 11>;
             layers = <1>;
         };
     };
