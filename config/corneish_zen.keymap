@@ -75,6 +75,11 @@
             key-positions = <10 11>;
             layers = <0>;
         };
+
+        spotlight {
+            bindings = <&kp LG(SPACE)>;
+            key-positions = <37 39>;
+        };
     };
 
     keymap {
